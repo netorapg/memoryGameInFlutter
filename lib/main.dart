@@ -30,10 +30,10 @@ class _MemoryGameState extends State<MemoryGame> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Memory Game'),
+        title: const Text('Memory Game'),
       ),
       body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
         ),
         itemCount: 16,
@@ -68,7 +68,7 @@ class _MemoryGameState extends State<MemoryGame> {
               flipOnTouch: !isFlipped[index],
               front: Container(
                 color: Colors.blue,
-                child: Center(
+                child: const Center(
                   child: Text(
                     '?',
                     style: TextStyle(fontSize: 48.0),
@@ -80,7 +80,7 @@ class _MemoryGameState extends State<MemoryGame> {
                 child: Center(
                   child: Text(
                     items[index],
-                    style: TextStyle(fontSize: 48.0),
+                    style: const TextStyle(fontSize: 48.0),
                   ),
                   ),
               ),
